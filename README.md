@@ -10,7 +10,6 @@ El tres en línea, también conocido como Ceros y Cruces, tres en raya (en Espa�
 2. Instalar las dependencias de sistema: 
     - php >= 7.1.3
     - php-sqlite3
-    - composer
 3. Instalar las dependencias del proyecto con el comando `composer install`
 
 ### Contacto ###
