@@ -48,35 +48,35 @@
     </nav>
     <div class="container-fluid">
         <div class="row" style="margin:  auto;">
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_1',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_1 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_2',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_2 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_3',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_3 }}</p>
             </div>
         </div>
         <div class="row" style="margin:  auto;">
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_4',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_4 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_5',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_5 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_6',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_6 }}</p>
             </div>
         </div>
         <div class="row" style="margin:  auto;">
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_7',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_7 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_8',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_8 }}</p>
             </div>
-            <div class="col-4 square">
+            <div class="col-4 square" style="{{ in_array('square_9',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_9 }}</p>
             </div>
         </div>
