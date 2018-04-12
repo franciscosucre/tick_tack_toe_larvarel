@@ -48,7 +48,7 @@ class GamesController extends Controller
     
     public function result($id){
         $game = Game::find($id);
-        $line = $game->isGameWon();
-        return view('result',['game' => $game, 'line'=> $line]);
+        $line = $game->isGameWon() ?: [];
+        return view('result',['game' => $game, 'line'=> $line, ]);
     }
 }

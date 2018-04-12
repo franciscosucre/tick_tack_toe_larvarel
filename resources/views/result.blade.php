@@ -28,6 +28,12 @@
             display: inline-block;
 
         }
+
+        .square-row {
+            height: 100px;
+            margin-left: 10em;
+            margin-right: 10em;
+        }
     </style>
 
 </head>
@@ -47,7 +53,14 @@
         </a>
     </nav>
     <div class="container-fluid">
-        <div class="row" style="margin:  auto;">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-info" style="margin-top: 15px;" role="alert">
+                    <h4><b>This game has ended!</b></h4>
+                </div>
+            </div>
+        </div>
+        <div class="row square-row" >
             <div class="col-4 square" style="{{ in_array('square_1',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_1 }}</p>
             </div>
@@ -58,7 +71,7 @@
                 <p class="square-content">{{ $game->square_3 }}</p>
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row" >
             <div class="col-4 square" style="{{ in_array('square_4',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_4 }}</p>
             </div>
@@ -69,7 +82,7 @@
                 <p class="square-content">{{ $game->square_6 }}</p>
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row" >
             <div class="col-4 square" style="{{ in_array('square_7',$line) ? 'background-color: yellow;' : '' }}">
                 <p class="square-content">{{ $game->square_7 }}</p>
             </div>
@@ -80,22 +93,29 @@
                 <p class="square-content">{{ $game->square_9 }}</p>
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row" >
             <div class="col-4">
             </div>
-            <div style="text-align:  center;" class="col-4">
+            <div style="text-align:  center; margin-top: 15px;" class="col-4">
+                
                 @if ($game->O_won )
-                <p>Player "O" has won!</p>
+                    <div class="alert alert-primary" role="alert">
+                        <h4><b>Player "O" has won!</b></h4>
+                    </div>
                 @elseif ($game->X_won )
-                <p>Player "X" has won!</p>
+                    <div class="alert alert-danger" role="alert">
+                        <h4><b>Player "X" has won!</b></h4>
+                    </div>
                 @elseif ($game->tie )
-                <p>The game ended in a tie!</p>
+                    <div class="alert alert-warning" role="alert">
+                        <h4><b>The game ended in a tie!</b></h4>
+                    </div>
                 @endif
             </div>
             <div class="col-4">
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row" style="margin-top: 15px;">
             <div class="col-4">
             </div>
             <div style="display: flex; align-items: center; justify-content: center;" class="col-4">

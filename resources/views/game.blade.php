@@ -23,9 +23,16 @@
             align-items: center;
             justify-content: center;
         }
+
         .square-content {
             display: inline-block;
-            
+
+        }
+
+        .square-row {
+            height: 100px;
+            margin-left: 10em;
+            margin-right: 10em;
         }
     </style>
 
@@ -47,15 +54,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h4>Turn: Player "{{ $game->turn }}"</h4>
+                <div class="alert {{ $game->turn === 'X' ? 'alert-danger' : 'alert-primary' }} " style="margin-top: 15px;" role="alert">
+                    <h4><b>Turn: Player "{{ $game->turn }}"</b></h4>
+                </div>
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row">
             <div class="col-4 square">
                 @if (!$game->square_1)
                 <form class="square-content" action="/square_1" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_1 }}</p> 
@@ -65,7 +74,7 @@
                 @if (!$game->square_2)
                 <form class="square-content" action="/square_2" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_2 }}</p> 
@@ -75,19 +84,19 @@
                 @if (!$game->square_3)
                 <form class="square-content" action="/square_3" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_3 }}</p> 
                 @endif
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row">
             <div class="col-4 square">
                 @if (!$game->square_4)
                 <form class="square-content" action="/square_4" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_4 }}</p> 
@@ -97,7 +106,7 @@
                 @if (!$game->square_5)
                 <form class="square-content" action="/square_5" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_5 }}</p> 
@@ -107,19 +116,19 @@
                 @if (!$game->square_6)
                 <form class="square-content" action="/square_6" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_6 }}</p> 
                 @endif
             </div>
         </div>
-        <div class="row" style="margin:  auto;">
+        <div class="row square-row" >
             <div class="col-4 square">
                 @if (!$game->square_7)
                 <form class="square-content" action="/square_7" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_7 }}</p> 
@@ -129,7 +138,7 @@
                 @if (!$game->square_8)
                 <form class="square-content" action="/square_8" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }} btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_8 }}</p> 
@@ -139,7 +148,7 @@
                 @if (!$game->square_9)
                 <form class="square-content" action="/square_9" method="post">
                     {{ csrf_field() }}
-                    <button class="btn btn-primary btn-sm" type="submit">{{ $game->turn }}</button>
+                    <button class="btn {{ $game->turn === 'X' ? 'btn-danger' : 'btn-primary' }}  btn-sm" type="submit">{{ $game->turn }}</button>
                 </form>
                 @else 
                     <p class="square-content">{{ $game->square_9 }}</p> 
