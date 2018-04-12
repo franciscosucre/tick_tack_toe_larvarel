@@ -11,13 +11,13 @@ El tres en línea, también conocido como Ceros y Cruces, tres en raya (en Espa�
     - php >= 7.1.3
     - php-sqlite3
 3. Instalar las dependencias del proyecto con el comando `bin/composer install`
-4. Si no existe, crear un archivo database.sqlite
+4. Si no existe, crear un archivo database.sqlite en la carpeta database
 5. Si se creo el archivo de database.sqlite, correr el comando `php artisan migrate --force`
 
 ### Como iniciar el proyecto ###
 
-1. Iniciar el servidor `php artisan serve`
-2. Abrir un navegador en la direccion localhost:8000
+1. Iniciar el servidor con el comando `php artisan serve`
+2. Abrir un navegador en la direccion **localhost:8000**
 3. Disfrutar del juego!
 
 ### Contacto ###
